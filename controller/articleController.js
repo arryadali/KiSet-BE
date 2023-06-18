@@ -2,12 +2,14 @@ import Artikel from "../model/Artikel.js";
 
 export const createArticle = async (req, res) => {
   try {
-    const { judul, foto, deskripsi } = req.body;
+    const { judul, foto, deskripsi, cegah, obat } = req.body;
 
     const createArticle = await Artikel.create({
       title: judul,
       foto: foto,
       description: deskripsi,
+      cegah : cegah,
+      obat : obat,
     });
 
     res.status(201).json({ createArticle });

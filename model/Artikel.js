@@ -9,12 +9,23 @@ const articleSchema = new mongoose.Schema(
       maxlength: 320,
       required: true,
     },
+    cegah: {
+      type: {},
+      minlength: 50,
+      required: true,
+    },
+    obat: {
+      type: {},
+      minlength: 50,
+      required: true,
+    },
     description: {
       type: {},
       minlength: 50,
       required: true,
     },
     foto: String,
+    
   },
   { timestamps: true }
 );
